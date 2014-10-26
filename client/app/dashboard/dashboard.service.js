@@ -12,6 +12,9 @@ angular.module('mentionrApp')
       });
     };
 
+    var postNewWord = function(word,userId){
+      $http.post('/api/words', )
+    };
     //Get Request for the Word Visualiser - Trigger on Click of Word from Left Bar
     //Returned Object with x array corresponding y array and total length
     var populateVisualizer = function(wordId){
@@ -61,6 +64,7 @@ angular.module('mentionrApp')
     // Public API here
     return {
       populateVisualizer: populateVisualizer,
-      populateWordsBar: populateWordsBar
+      populateWordsBar: populateWordsBar,
+      postNewWord: postNewWord
       };
   });
